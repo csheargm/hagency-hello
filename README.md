@@ -1,5 +1,18 @@
 # hagency-hello
 
+**Live site:** <https://csheargm.github.io/hagency-hello/>
+
+## Deployment
+
+The app is the single static file `index.html`, published with GitHub Pages by
+the workflow in `.github/workflows/pages.yml`. Every push to the default branch
+(that is, every merged change) copies `index.html` into the Pages artifact and
+deploys it; there is no build step. You can also run the workflow by hand from
+the Actions tab ("Deploy to GitHub Pages" → "Run workflow").
+
+One-time setup: in the repository's **Settings → Pages**, set **Source** to
+**GitHub Actions**.
+
 ## Greeting colors and sizes
 
 Each language is paired with one representative country for styling only; the
