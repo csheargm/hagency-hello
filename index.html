@@ -31,5 +31,16 @@
     <li class="russia"><span class="label">Russian · Russia</span><span class="greeting" lang="ru" dir="ltr">Здравствуйте</span></li>
     <li class="mexico"><span class="label">Spanish · Mexico</span><span class="greeting" lang="es" dir="ltr">Hola</span></li>
   </ul>
+  <script>
+    // Shuffle the greeting order on each load (Fisher–Yates). The items stay in
+    // the normal grid flow, so they never overlap, clip or scroll sideways.
+    const list = document.querySelector('ul');
+    const items = Array.from(list.children);
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    list.append(...items);
+  </script>
 </body>
 </html>
