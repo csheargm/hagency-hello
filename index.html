@@ -5,22 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Greetings in the six UN official languages</title>
   <style>
-    body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 40rem; padding: 0 1rem; }
+    body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 40rem; padding: 0 1rem; color: #222; background: #fff; }
     ul { list-style: none; padding: 0; display: grid; gap: 1rem; }
     li { border: 1px solid #ccc; border-radius: 0.5rem; padding: 1rem; }
     .label { display: block; font-size: 0.9rem; color: #555; }
-    .greeting { display: block; font-size: 2rem; margin-top: 0.25rem; }
+    .greeting { display: block; margin-top: 0.25rem; color: var(--greeting-color); font-size: var(--greeting-size); overflow-wrap: anywhere; }
+
+    /* Size increases with representative-country population (see README). */
+    .france { --greeting-color: #522478; --greeting-size: 1.75rem; }
+    .egypt { --greeting-color: #743b13; --greeting-size: 2rem; }
+    .mexico { --greeting-color: #14613c; --greeting-size: 2.25rem; }
+    .russia { --greeting-color: #1a5371; --greeting-size: 2.5rem; }
+    .united-states { --greeting-color: #283d80; --greeting-size: 2.75rem; }
+    .china { --greeting-color: #8b2030; --greeting-size: 3rem; }
   </style>
 </head>
 <body>
   <h1>Hello, world — in the six UN official languages</h1>
+  <p>Each greeting uses one representative country for its color and size. These languages are spoken in many countries.</p>
   <ul>
-    <li><span class="label">Arabic</span><span class="greeting" lang="ar" dir="rtl">مرحبا</span></li>
-    <li><span class="label">Chinese</span><span class="greeting" lang="zh" dir="ltr">你好</span></li>
-    <li><span class="label">English</span><span class="greeting" lang="en" dir="ltr">Hello</span></li>
-    <li><span class="label">French</span><span class="greeting" lang="fr" dir="ltr">Bonjour</span></li>
-    <li><span class="label">Russian</span><span class="greeting" lang="ru" dir="ltr">Здравствуйте</span></li>
-    <li><span class="label">Spanish</span><span class="greeting" lang="es" dir="ltr">Hola</span></li>
+    <li class="egypt"><span class="label">Arabic · Egypt</span><span class="greeting" lang="ar" dir="rtl">مرحبا</span></li>
+    <li class="china"><span class="label">Chinese · China</span><span class="greeting" lang="zh" dir="ltr">你好</span></li>
+    <li class="united-states"><span class="label">English · United States</span><span class="greeting" lang="en" dir="ltr">Hello</span></li>
+    <li class="france"><span class="label">French · France</span><span class="greeting" lang="fr" dir="ltr">Bonjour</span></li>
+    <li class="russia"><span class="label">Russian · Russia</span><span class="greeting" lang="ru" dir="ltr">Здравствуйте</span></li>
+    <li class="mexico"><span class="label">Spanish · Mexico</span><span class="greeting" lang="es" dir="ltr">Hola</span></li>
   </ul>
 </body>
 </html>
