@@ -1,5 +1,11 @@
 # hagency-hello
 
+## Current time for a location
+
+Pick a city under the greetings to see its current time (24-hour, updated every
+second). The cities are the `<option>` entries in `index.html`; the logic is in
+`clock.js`. Run the tests with `node --test` (no dependencies).
+
 ## Greeting colors and sizes
 
 Each language is paired with one representative country for styling only; the
