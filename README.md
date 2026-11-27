@@ -1,5 +1,10 @@
 # hagency-hello
 
+## Notes
+
+Open [notes.html](notes.html) to add notes and choose English or French.
+Run the localization tests with `node --test notes.test.js`.
+
 ## Greeting colors and sizes
 
 Each language is paired with one representative country for styling only; the

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 40rem; padding: 0 1rem; }
+    form { display: grid; gap: 0.5rem; margin-block: 1.5rem; }
+    button, select, textarea { font: inherit; }
+    button { justify-self: start; }
+    li { margin-block: 1rem; }
+    li p { margin-block: 0.25rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+  </style>
+  <script defer src="translations.js"></script>
+  <script defer src="notes.js"></script>
+</head>
+<body>
+  <main>
+    <h1 data-text="heading"></h1>
+    <label for="language" data-text="language"></label>
+    <select id="language"></select>
+    <form id="note-form">
+      <label for="note" data-text="note"></label>
+      <textarea id="note" required></textarea>
+      <button data-text="add"></button>
+    </form>
+    <h2 data-text="savedNotes"></h2>
+    <ul id="notes"></ul>
+    <template id="note-template">
+      <li><p></p><time></time></li>
+    </template>
+  </main>
+</body>
+</html>
