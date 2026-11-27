@@ -18,6 +18,9 @@
     .russia { --greeting-color: #1a5371; --greeting-size: 2.5rem; }
     .united-states { --greeting-color: #283d80; --greeting-size: 2.75rem; }
     .china { --greeting-color: #8b2030; --greeting-size: 3rem; }
+
+    .clock { margin-top: 2rem; }
+    .clock output { display: block; margin-top: 0.25rem; font-size: 2rem; font-variant-numeric: tabular-nums; }
   </style>
 </head>
 <body>
@@ -31,6 +34,19 @@
     <li class="russia"><span class="label">Russian · Russia</span><span class="greeting" lang="ru" dir="ltr">Здравствуйте</span></li>
     <li class="mexico"><span class="label">Spanish · Mexico</span><span class="greeting" lang="es" dir="ltr">Hola</span></li>
   </ul>
+  <section class="clock">
+    <label for="clock-location">Current time in</label>
+    <select id="clock-location">
+      <option value="America/Los_Angeles">San Jose</option>
+      <option value="America/New_York">New York</option>
+      <option value="Europe/London">London</option>
+      <option value="Africa/Cairo">Cairo</option>
+      <option value="Asia/Shanghai">Shanghai</option>
+      <option value="Asia/Tokyo">Tokyo</option>
+    </select>
+    <output id="clock-time" for="clock-location"></output>
+  </section>
+  <script src="clock.js"></script>
   <script>
     // Shuffle the greeting order on each load (Fisher–Yates). The items stay in
     // the normal grid flow, so they never overlap, clip or scroll sideways.
